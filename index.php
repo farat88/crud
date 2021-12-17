@@ -30,13 +30,23 @@ require_once 'connect.php';
     <th>Title</th>
     <th>Description</th>
     <th>Price</th>
-    <tr>
-        <td>1</td>
-        <td>Product 1</td>
-        <td>Lorem ipsun</td>
-        <td>1000$</td>
-    </tr>
 </tr>
+
+<?php
+    $products = mysqli_query($connect, "SELECT * FROM `products`");
+    $products = mysqli_fetch_all($products);
+    foreach ($products as $product) {
+        ?>
+            <tr>
+                <td><?= $product[0] ?></td>
+                <td><?= $product[1] ?></td>
+                <td><?= $product[3] ?></td>
+                <td><?= $product[2] ?>$</td>
+            </tr>
+            <?php
+    }
+?>
+
 </table>
 </body>
 </html>
