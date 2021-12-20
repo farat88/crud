@@ -46,6 +46,7 @@ require_once 'config/connect.php';
                 <td><?= $product[1] ?></td>
                 <td><?= $product[3] ?></td>
                 <td><?= $product[2] ?>$</td>
+                <td><a href="../CRUD/update.php?id=<?= $product[0] ?>">Update</a></td>
             </tr>
             <?php
     }
