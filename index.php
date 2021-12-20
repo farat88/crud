@@ -52,12 +52,12 @@ require_once 'config/connect.php';
 ?>
 </table>
 <h3>Add new product</h3>
-<form action="" method="POST">
-    <p>title</p>
+<form action="vendor/create.php" method="POST">
+    <p>Title</p>
     <input type="text" name="title">
-    <p>description</p>
+    <p>Description</p>
     <textarea name="description"></textarea>
-    <p>price</p>
+    <p>Price</p>
     <input type="number" name="price"> <br> <br>
     <input type="submit" name="submit" value="add new product">
 </form>
